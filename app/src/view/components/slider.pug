@@ -1,0 +1,9 @@
+.slider 
+    .slider__inner 
+        -var slider_data =                                                                     [                                                                                         {title: 'My beginning', desc: 'Self-development and training in the training center',    tech:                                                                                       [                                                                                        {img: '/images/html.webp', name: 'HTML'},                                                 {img: '/images/css.webp', name: 'CSS'},                                                   {img: '/images/boot.webp', name: 'bootstrap 5'}],                                             link: {href: 'https://www.w3schools.com/html/', text: 'GET STARTED NOW'}, img: '/images/slider.webp'}     ,                                                                     {title: 'My beginning', desc: 'Self-development and training in the training center',    tech:                                                                                       [                                                                                        {img: '/images/js.webp', name: 'JAVA-SCRIPT'},                                                {img: '/images/python.webp', name: 'PYTHON'},                                                 {img: '/images/figma.webp', name: 'FIGMA 5'}],                                             link: {href: 'https://www.w3schools.com/html/', text: 'GET STARTED NOW'}, img: '/images/slider2.webp'} ,                                                                       {title: 'My beginning', desc: 'Self-development and training in the training center'}]
+        each slide in slider_data
+            include slider/slider-item.pug
+    //- .slider__line 
+    //-     span.slider__line-item 
+    //-     span.slider__line-item 
+    //-     span.slider__line-item 

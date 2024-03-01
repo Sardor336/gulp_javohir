@@ -1,0 +1,16 @@
+nav.header__nav 
+    a.header__nav-logo(href="#")
+        img(src="/images/MYWORK.webp", alt="") 
+
+    button.header__nav-btn 
+        img(src="/images/menu.svg", alt="")
+
+    ul.header__nav-list
+        -for(var i = 0; i < links.length; i++)
+            li.header__nav-item 
+                a(href= links[i].href).header__nav-link= links[i].name
+        li.header__nav-item 
+            a(href="#").header__nav-link.order to order 
+        li.header__nav-item 
+            a(href="tel:+998 99 824 28 40") 
+                img(src="/images/tel.webp", alt="")

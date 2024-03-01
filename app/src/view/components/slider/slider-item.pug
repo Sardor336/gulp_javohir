@@ -1,0 +1,13 @@
+.slider__item 
+    .slider__item-content 
+        h2.slider__item-title= slide.title
+        p.slider__item-desc= slide.desc
+        -if(slide.link)
+            a.slider__item-link(href=slide.link.href)= slide.link.text 
+        -if(slide.tech)
+            .slider__item-tech 
+                each thech in slide.tech
+                    .slider__item-technologi 
+                        img(src=thech.img, alt="")
+                        h3.slider__item-technologi_title= thech.name 
+    img.slider__item-pic(src= slide.img ? slide.img : "/images/slider3.webp", alt="")

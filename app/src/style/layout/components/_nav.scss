@@ -1,0 +1,68 @@
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 27px 12px 0;
+    position: relative;
+    &-logo {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0;
+        & img {
+            width: 100%;
+            @include media($md) {
+                width: 70%;
+            }
+        }
+    }
+    &-btn {
+        background: transparent;
+        border: none;
+        outline: none;
+        padding: 5px;
+        display: none;
+        & img {
+            width: 30px;
+            height: 30px;
+        }
+        @include media($lg) {
+            display: block;
+        }
+    }
+    &-list {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        @include media($lg) {
+            flex-direction: column;
+            position: absolute;
+            right: 0;
+            background: var(--bg);
+            @include shadow(5, 3);
+            border-radius: 8px;
+            top: 15px;
+            padding: 10px 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translate(30px) scale(0.9);
+            transition: 300ms;
+            &.show {
+                opacity: 1;
+                visibility: visible;
+                transform: translate(0) scale(1);
+            }
+        }
+    }
+    &-link {
+        color: var(--links);
+        font-size: 24px;
+        text-transform: capitalize;
+        &.order {
+            padding: 10px 43px;
+            border-radius: 8px;
+            background: var(--links);
+            color: var(--text);
+            @include shadow(5, 1);
+        }
+    }
+}
